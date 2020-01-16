@@ -9,7 +9,7 @@
 	<input class="button" style="width: 100%; font-size: 1em; padding: .4em" type="submit" value="Login" />
 </form>
 
-<a href="index.html" style="text-align: right">&gt;back</a>
+<a href="index.html">&gt;back</a>
 
 <c:if test="${error != null}">
 	<div id="error">

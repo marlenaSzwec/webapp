@@ -11,4 +11,6 @@
 	<h1>Hello ${account.login}!</h1>
 </c:if>
 
+<a href="index.html">&gt;back</a>
+
 <%@ include file="footer.jsp"%>
