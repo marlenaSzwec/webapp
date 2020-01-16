@@ -51,22 +51,30 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.2</version>
+					<groupId>com.microsoft.azure</groupId>
+					<artifactId>azure-webapp-maven-plugin</artifactId>
+					<version>1.8.0</version>
 					<configuration>
-						<verbose>true</verbose>
-						<source>1.8</source>
-						<target>1.8</target>
-						<showWarnings>true</showWarnings>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.eclipse.jetty</groupId>
-					<artifactId>jetty-maven-plugin</artifactId>
-					<version>9.4.25.v20191220</version>
-					<configuration>
-						<scanIntervalSeconds>10</scanIntervalSeconds>
+						<schemaVersion>V2</schemaVersion>
+						<resourceGroup>webapp-1579205407426-rg</resourceGroup>
+						<appName>webapp-1579205407426</appName>
+						<pricingTier>P1v2</pricingTier>
+						<region>westeurope</region>
+						<runtime>
+							<os>linux</os>
+							<javaVersion>jre8</javaVersion>
+							<webContainer>TOMCAT 8.5</webContainer>
+						</runtime>
+						<deployment>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/target</directory>
+									<includes>
+										<include>*.war</include>
+									</includes>
+								</resource>
+							</resources>
+						</deployment>
 					</configuration>
 				</plugin>
 			</plugins>
