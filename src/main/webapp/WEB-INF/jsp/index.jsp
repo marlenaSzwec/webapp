@@ -9,8 +9,7 @@
 
 <c:if test="${account != null}">
 	<h1>Hello ${account.login}!</h1>
+	<a href="index.html">&gt;back</a>
 </c:if>
-
-<a href="index.html">&gt;back</a>
 
 <%@ include file="footer.jsp"%>
